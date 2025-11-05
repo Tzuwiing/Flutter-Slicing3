@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slicing_3/komponen/kartubutton.dart';
 
 class Kartukai extends StatelessWidget {
   const Kartukai({super.key});
@@ -8,81 +9,162 @@ class Kartukai extends StatelessWidget {
     return Positioned(
       left: 20,
       right: 20,
-      bottom: -50,
+      bottom: -130,
       child: Container(
-        height: 150,
+        height: 220,
         width: double.infinity,
-        decoration: BoxDecoration(color: Colors.amberAccent),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+          // border: Border.all(color: Colors.black),
+          boxShadow: [
+            BoxShadow(color: Colors.grey, blurRadius: 3, offset: Offset(0, 3)),
+          ],
+        ),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    spacing: 10,
-                    children: [
-                      Row(
-                        spacing: 10,
-                        children: [
-                          Container(
-                            height: 20,
-                            width: 20,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              shape: BoxShape.circle,
+          child: Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      spacing: 10,
+                      children: [
+                        Row(
+                          spacing: 10,
+                          children: [
+                            Container(
+                              height: 20,
+                              width: 20,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage("assets/wallet.png"),
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "KAIPay",
+                              style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "RP 19.000.000",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(width: 5),
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              size: 25,
+                              color: Colors.purple,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 70,
+                      child: VerticalDivider(
+                        color: Colors.grey,
+                        thickness: 0.5,
+                      ),
+                    ),
+                    Row(
+                      spacing: 25,
+                      children: [
+                        KartuButton(title: "Scan", icon: Icons.qr_code),
+                        KartuButton(
+                          title: "Top Up",
+                          icon: Icons.wallet_membership,
+                        ),
+                        KartuButton(title: "Riwayat", icon: Icons.history),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Divider(color: Colors.grey, thickness: 0.5, height: 10),
+                SizedBox(height: 10),
+                Row(
+                  spacing: 10,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/coin.png"),
                             ),
                           ),
-                          Text("KaiPay"),
+                        ),
+                        SizedBox(width: 10),
+                        Text(
+                          "19",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.amber,
+                          ),
+                        ),
+                        Text(" Railpoin", style: TextStyle(fontSize: 18)),
+                      ],
+                    ),
+
+                    Container(
+                      height: 50,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        color: Colors.purpleAccent.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        spacing: 5,
+                        children: [
+                          Container(
+                            height: 35,
+                            width: 35,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage("assets/frame.png"),
+                              ),
+                            ),
+                          ),
+                          Text(
+                            "Premium",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.purple,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.arrow_forward_ios_rounded),
+                          ),
                         ],
                       ),
-                      Text("RP,0"),
-                    ],
-                  ),
-                  Row(
-                    spacing: 10,
-                    children: [
-                      Container(width: 30, height: 40, color: Colors.white),
-                      Container(width: 30, height: 40, color: Colors.white),
-                      Container(width: 30, height: 40, color: Colors.white),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Row(
-                spacing: 10,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    spacing: 10,
-                    children: [
-                      Container(
-                        height: 20,
-                        width: 20,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                      Text("0 Railpoint", style: TextStyle(fontSize: 15)),
-                    ],
-                  ),
-
-                  Container(
-                    height: 50,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

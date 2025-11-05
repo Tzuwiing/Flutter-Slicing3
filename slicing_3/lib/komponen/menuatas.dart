@@ -2,8 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:slicing_3/komponen/buttonmn.dart';
 
-class Menuatas extends StatelessWidget {
+class Menuatas extends StatefulWidget {
   const Menuatas({super.key});
+
+  @override
+  State<Menuatas> createState() => _MenuatasState();
+}
+
+class _MenuatasState extends State<Menuatas> {
+  final List<String> countries = ["ID", "BR", "FR"];
+  String? selectedCountry = "ID";
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +41,48 @@ class Menuatas extends StatelessWidget {
               ),
             ],
           ),
-          Row(spacing: 10, children: [Buttonmn(), Buttonmn()]),
+          Row(
+            children: [
+              Buttonmn(icon: LucideIcons.shoppingCart),
+              SizedBox(width: 10),
+              Buttonmn(icon: LucideIcons.mail),
+              SizedBox(width: 10),
+              Container(
+                height: 50,
+                width: 100,
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.4),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: DropdownButtonHideUnderline(
+                  child: DropdownButton<String>(
+                    value: selectedCountry,
+                    icon: Icon(Icons.keyboard_arrow_down, color: Colors.white),
+                    dropdownColor: Colors.blueGrey[100],
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    items: countries.map((String country) {
+                      return DropdownMenuItem<String>(
+                        value: country,
+                        child: Text(
+                          country,
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      );
+                    }).toList(),
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        selectedCountry = newValue;
+                      });
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
