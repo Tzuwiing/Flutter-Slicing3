@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:slicing_3/komponen/kartukai.dart';
 // import 'package:lucide_icons_flutter/lucide_icons.dart';
 // import 'package:lucide_icons_flutter/test_icons.dart';
 import 'package:slicing_3/komponen/menuatas.dart';
+import 'package:slicing_3/komponen/menumore.dart';
 import 'package:slicing_3/komponen/mnkereta.dart';
 
 class Homepage extends StatelessWidget {
@@ -85,6 +87,20 @@ class Homepage extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 40),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                MenuMore(title: "Hotel", icon: Icons.hotel),
+                MenuMore(
+                  title: "Kartu Multi Trip",
+                  icon: LucideIcons.creditCard,
+                ),
+                MenuMore(title: "Logistik", icon: LucideIcons.box),
+                MenuMore(title: "Lainnya", icon: Icons.view_module_rounded),
+              ],
+            ),
+           
           ],
         ),
       ),
