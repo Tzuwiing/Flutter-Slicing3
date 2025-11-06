@@ -39,16 +39,16 @@ class Kartukai extends StatelessWidget {
                           spacing: 10,
                           children: [
                             Container(
-                              height: 20,
-                              width: 20,
+                              height: 40,
+                              width: 40,
                               decoration: BoxDecoration(
                                 image: DecorationImage(
-                                  image: AssetImage("assets/wallet.png"),
+                                  image: AssetImage("assets/logoKAY.png"),
                                 ),
                               ),
                             ),
                             Text(
-                              "KAIPay",
+                              "KAYPay",
                               style: TextStyle(
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold,

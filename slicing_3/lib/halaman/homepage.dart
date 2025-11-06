@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
+import 'package:slicing_3/komponen/bannerpromo.dart';
 import 'package:slicing_3/komponen/kartukai.dart';
 // import 'package:lucide_icons_flutter/lucide_icons.dart';
 // import 'package:lucide_icons_flutter/test_icons.dart';
 import 'package:slicing_3/komponen/menuatas.dart';
 import 'package:slicing_3/komponen/menumore.dart';
 import 'package:slicing_3/komponen/mnkereta.dart';
+import 'package:slicing_3/komponen/trip.dart';
 
 class Homepage extends StatelessWidget {
+  final Color activeColor = Colors.purple;
+  final Color inactiveColor = Colors.grey;
   const Homepage({super.key});
 
   @override
@@ -35,7 +39,7 @@ class Homepage extends StatelessWidget {
                 Kartukai(),
               ],
             ),
-            SizedBox(height: 170),
+            SizedBox(height: 155),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SingleChildScrollView(
@@ -87,7 +91,7 @@ class Homepage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -100,7 +104,169 @@ class Homepage extends StatelessWidget {
                 MenuMore(title: "Lainnya", icon: Icons.view_module_rounded),
               ],
             ),
-           
+            SizedBox(height: 10),
+            Trip(),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Promo Terbaru",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  Container(
+                    width: 130,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: Colors.purpleAccent, width: 2),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Lihat Semua",
+                        style: TextStyle(
+                          color: Colors.purpleAccent,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 200,
+              width: double.infinity,
+              child: PageView(
+                children: [
+                  BannerPromo(banner: "assets/banner1.png"),
+                  BannerPromo(banner: "assets/banner2.png"),
+                  BannerPromo(banner: "assets/banner3.png"),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.white,
+        elevation: 10.0,
+        height: 70,
+        padding: EdgeInsets.zero,
+        child: Row(
+          children: [
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/home.png',
+                    width: 28,
+                    height: 28,
+                    color: activeColor,
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    'Beranda',
+                    style: TextStyle(
+                      color: activeColor,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/keretarel.png',
+                    width: 28,
+                    height: 28,
+                    color: inactiveColor,
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    'Kereta',
+                    style: TextStyle(
+                      color: inactiveColor,
+                      fontSize: 12,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/ticket.png',
+                    width: 28,
+                    height: 28,
+                    color: inactiveColor,
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    'Tiket Saya',
+                    style: TextStyle(
+                      color: inactiveColor,
+                      fontSize: 12,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/discount.png',
+                    width: 28,
+                    height: 28,
+                    color: inactiveColor,
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    'Promo',
+                    style: TextStyle(
+                      color: inactiveColor,
+                      fontSize: 12,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/user.png',
+                    width: 28,
+                    height: 28,
+                    color: inactiveColor,
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    'Akun',
+                    style: TextStyle(
+                      color: inactiveColor,
+                      fontSize: 12,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

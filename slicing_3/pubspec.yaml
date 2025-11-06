@@ -70,6 +70,14 @@ flutter:
     - assets/banner1.png
     - assets/banner2.png
     - assets/banner3.png
+    - assets/bg2.png
+    - assets/home.png
+    - assets/keretarel.png
+    - assets/ticket.png
+    - assets/discount.png
+    - assets/user.png
+    - assets/logoKAY.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
