@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:slicing_3/komponen/bannerpromo.dart';
 import 'package:slicing_3/komponen/kartukai.dart';
@@ -113,7 +114,10 @@ class Homepage extends StatelessWidget {
                 children: [
                   Text(
                     "Promo Terbaru",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   Container(
                     width: 130,
@@ -125,9 +129,9 @@ class Homepage extends StatelessWidget {
                     child: Center(
                       child: Text(
                         "Lihat Semua",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           color: Colors.purpleAccent,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                           fontSize: 15,
                         ),
                       ),
@@ -170,10 +174,10 @@ class Homepage extends StatelessWidget {
                   SizedBox(height: 4),
                   Text(
                     'Beranda',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       color: activeColor,
                       fontSize: 12,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
@@ -192,10 +196,10 @@ class Homepage extends StatelessWidget {
                   SizedBox(height: 4),
                   Text(
                     'Kereta',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       color: inactiveColor,
                       fontSize: 12,
-                      fontWeight: FontWeight.normal,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
@@ -214,10 +218,10 @@ class Homepage extends StatelessWidget {
                   SizedBox(height: 4),
                   Text(
                     'Tiket Saya',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       color: inactiveColor,
                       fontSize: 12,
-                      fontWeight: FontWeight.normal,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
@@ -236,10 +240,10 @@ class Homepage extends StatelessWidget {
                   SizedBox(height: 4),
                   Text(
                     'Promo',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       color: inactiveColor,
                       fontSize: 12,
-                      fontWeight: FontWeight.normal,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
@@ -258,10 +262,10 @@ class Homepage extends StatelessWidget {
                   SizedBox(height: 4),
                   Text(
                     'Akun',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       color: inactiveColor,
                       fontSize: 12,
-                      fontWeight: FontWeight.normal,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],

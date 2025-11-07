@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MenuKereta extends StatelessWidget {
   final String title;
@@ -21,7 +22,10 @@ class MenuKereta extends StatelessWidget {
           child: Icon(icon, size: 40, color: Colors.white),
         ),
         SizedBox(height: 5),
-        Text(title, style: TextStyle(fontSize: 15)),
+        Text(
+          title,
+          style: GoogleFonts.poppins(fontSize: 15, fontWeight: FontWeight.w500),
+        ),
       ],
     );
   }

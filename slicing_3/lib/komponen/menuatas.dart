@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:slicing_3/komponen/buttonmn.dart';
 
@@ -26,14 +27,14 @@ class _MenuatasState extends State<Menuatas> {
             children: [
               Text(
                 "Selamat Pagi",
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   color: Colors.white,
                   fontWeight: FontWeight.normal,
                 ),
               ),
               Text(
                 "Jusuf Fathan Nuradly",
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   color: Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,

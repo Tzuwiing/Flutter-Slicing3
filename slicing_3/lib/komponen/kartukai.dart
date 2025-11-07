@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:slicing_3/komponen/kartubutton.dart';
 
 class Kartukai extends StatelessWidget {
@@ -49,7 +50,7 @@ class Kartukai extends StatelessWidget {
                             ),
                             Text(
                               "KAYPay",
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -60,7 +61,7 @@ class Kartukai extends StatelessWidget {
                           children: [
                             Text(
                               "RP 19.000.000",
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -122,7 +123,13 @@ class Kartukai extends StatelessWidget {
                             color: Colors.amber,
                           ),
                         ),
-                        Text(" Railpoin", style: TextStyle(fontSize: 18)),
+                        Text(
+                          " Railpoin",
+                          style: GoogleFonts.poppins(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
                       ],
                     ),
 
@@ -135,7 +142,7 @@ class Kartukai extends StatelessWidget {
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        spacing: 5,
+                        spacing: 1,
                         children: [
                           Container(
                             height: 35,
@@ -148,15 +155,19 @@ class Kartukai extends StatelessWidget {
                           ),
                           Text(
                             "Premium",
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                               fontSize: 15,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                               color: Colors.purple,
                             ),
                           ),
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.arrow_forward_ios_rounded),
+                            icon: Icon(
+                              Icons.arrow_forward_ios_rounded,
+                              size: 20,
+                              color: Colors.purple,
+                            ),
                           ),
                         ],
                       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class KartuButton extends StatelessWidget {
   final String title;
@@ -15,9 +16,9 @@ class KartuButton extends StatelessWidget {
         ),
         Text(
           title,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
+          style: GoogleFonts.poppins(
+            fontWeight: FontWeight.w700,
+            fontSize: 15,
             color: const Color.fromARGB(255, 95, 94, 94),
           ),
         ),

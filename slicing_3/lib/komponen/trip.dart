@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Trip extends StatelessWidget {
   const Trip({super.key});
@@ -38,7 +39,7 @@ class Trip extends StatelessWidget {
               children: [
                 Text(
                   "TRIP Planner",
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                     color: Colors.white,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -46,11 +47,19 @@ class Trip extends StatelessWidget {
                 ),
                 Text(
                   "Rencanakan perjalanan",
-                  style: TextStyle(color: Colors.white, fontSize: 15),
+                  style: GoogleFonts.poppins(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
                 Text(
                   "Terbaikmu",
-                  style: TextStyle(color: Colors.white, fontSize: 15),
+                  style: GoogleFonts.poppins(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
               ],
             ),
@@ -65,7 +74,7 @@ class Trip extends StatelessWidget {
               child: Center(
                 child: Text(
                   "BUAT",
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
