@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:slicing_3/komponen/kartubutton.dart';
 
 class Kartukai extends StatelessWidget {
@@ -135,14 +136,14 @@ class Kartukai extends StatelessWidget {
 
                     Container(
                       height: 50,
-                      width: 150,
+                      width: 170,
                       decoration: BoxDecoration(
                         color: Colors.purpleAccent.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        spacing: 1,
+                        spacing: 5,
                         children: [
                           Container(
                             height: 35,
@@ -153,6 +154,11 @@ class Kartukai extends StatelessWidget {
                               ),
                             ),
                           ),
+                          // Icon(
+                          //   LucideIcons.circleStar,
+                          //   size: 30,
+                          //   color: Colors.purple,
+                          // ),
                           Text(
                             "Premium",
                             style: GoogleFonts.poppins(
@@ -164,8 +170,8 @@ class Kartukai extends StatelessWidget {
                           IconButton(
                             onPressed: () {},
                             icon: Icon(
-                              Icons.arrow_forward_ios_rounded,
-                              size: 20,
+                              LucideIcons.chevronRight,
+                              size: 25,
                               color: Colors.purple,
                             ),
                           ),

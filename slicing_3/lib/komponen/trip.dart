@@ -7,7 +7,7 @@ class Trip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(25.0),
       child: Container(
         width: double.infinity,
         height: 140,
@@ -22,13 +22,22 @@ class Trip extends StatelessWidget {
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(10.0),
               child: Container(
                 width: 80,
                 height: 80,
                 decoration: BoxDecoration(
-                  color: Colors.deepPurpleAccent,
+                  color: Colors.purple,
                   borderRadius: BorderRadius.circular(10),
+                ),
+                child: Container(
+                  width: 60,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/calendar.png"),
+                    ),
+                  ),
                 ),
               ),
             ),
